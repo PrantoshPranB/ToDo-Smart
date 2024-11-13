@@ -1,0 +1,24 @@
+﻿<Window x:Class="ToDo_Smart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="To-Do List" Height="500" Width="400">
+    <Grid>
+        <DataGrid x:Name="TodoDataGrid" AutoGenerateColumns="False" CanUserAddRows="True" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="70" Header="Time" Binding="{Binding Time}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="213" Header="To-Do Item" Binding="{Binding Item}"/>
+                <DataGridComboBoxColumn Width="70" Header="Status" SelectedItemBinding="{Binding Status}">
+                    <DataGridComboBoxColumn.ItemsSource>
+                        <x:Array Type="{x:Type sys:String}">
+                            <sys:String>TBD</sys:String>
+                            <sys:String>Done</sys:String>
+                            <sys:String>Not Done</sys:String>
+                        </x:Array>
+                    </DataGridComboBoxColumn.ItemsSource>
+                </DataGridComboBoxColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="End of Day" Click="OnEndOfDay" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"/>
+    </Grid>
+</Window>

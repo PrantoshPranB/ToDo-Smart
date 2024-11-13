@@ -1,0 +1,72 @@
+# Ignore build and output directories
+bin/
+obj/
+
+# Ignore package dependencies
+packages/
+*.nupkg
+*.snupkg
+
+# Ignore user-specific files and settings
+.vscode/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore Visual Studio Code workspace files
+*.code-workspace
+
+# Ignore local environment and build logs
+.vs/
+.vscode/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+!src/**/artifacts/
+.vscode/
+
+# Ignore JetBrains Rider project files
+.idea/
+*.sln.iml
+
+# Ignore GitHub Desktop-specific configurations (if any)
+.github/
+
+# Ignore CSV files (if only used for local data storage in this project)
+TodoItems.csv
+
+# Ignore compiled DLLs
+*.dll
+*.exe
+*.so
+*.dylib
+*.class
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Ignore Publish and Installer files
+publish/
+Installer/
+out/
+
+# Ignore crash reports and log files
+*.log
+*.pid
+*.gz
+*.mdmp
+
+# Ignore .NET core dependencies and build output
+*.ide
+*.sln.docstates
+.cache/
+.idea/
+*.dbmdl
+*.pdb
+_ReSharper*/
+_TeamCity*/
